@@ -1,0 +1,35 @@
+Aplia (dato){    //Espera en el bucle while mientras la pila este llena y tenga intentos, cuando alguien haga
+		//un notifyall todos intentaran entrar, entrara 1 y los demas volverán a tener la pila llena
+		//pero se les habra sumado un intento, cuando lleguen al maximo, si sigue estando llena lanzan la 
+		//excecion
+	int intentos = 0; //intentos se inicializa dentro de el metodo apila y cada hilo que lo ejecute tendra una 
+			  //diferente ya que cada hilo ejecuta el metodo independiente
+	while(pilallena() &&intentos < 3) wait () intentos++ //intenta meterlo 3 veces si no da excepcion
+	
+	if(!pilallena())
+		//introducir dato56
+		notifyall()
+	else
+		Throw Exception 
+
+main: //para que acabe y no se quede el canvas abierto -> system.exit(0)
+
+p1.start()
+p2.start()
+p3.start()
+p4.start()
+c1.start()
+
+c1.join
+
+//notifyAll(); esto afectaria al this (main)
+
+for(int i = 0 ; i < 3 ; i++){
+sleep(1000) //sleep para que le de tiempo a los procesos a volver a llegar al bucle while
+synchronized (mipila){
+	mipila.notifyAll()	
+}
+}
+
+p1.join
+p2.join

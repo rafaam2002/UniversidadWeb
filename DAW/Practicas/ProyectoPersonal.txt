@@ -1,0 +1,18 @@
+TITULO: Aplicacion Bancaria
+
+DESCRIPCION: consistirá en una aplicacion personalizada para cada usuario donde cada uno podrá consultar una
+	     serie de estadisticas relacionadas con sus ingresos como tambien hacer transacciones o bizums.
+
+FUNCIONALIDAD: 
+	Login
+	Dashboard
+	transaccion
+	Agenda
+
+TECNOLOGIAS:
+	Front:
+		HTML
+		JS
+		Tailwind CSS
+	Back:
+		JDBC
